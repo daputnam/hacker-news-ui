@@ -2,12 +2,21 @@ import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import './index.css';
 
+const NewsItem = (data) => {
+  return (
+    <div>HackerItem here</div>
+  );
+}
+
 class HackerNews extends Component {
   render() {
     return (
       <div className="main">
         title bar here
         <div>
+          {data.map(item => (
+            <NewsItem item={item} />
+          ))}
           list of newsItems here
         </div>
       </div>
